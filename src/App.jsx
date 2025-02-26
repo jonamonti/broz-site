@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import brozLogo from './assets/images/broz-logo.jpeg'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='container'>
+      <div className='top-container'>
+        <img className="logo bomb-cursor" src={brozLogo} alt='logo'/>
+      </div>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='bottom-container'>
+        <div className="slider" style={{
+          "--height": "50px",
+          "--width": "150px",
+          "--quantity": "10"
+          }}>
+          <div className='list'>
+            <div className='item rocket-cursor' style={{"--position": 1}}><p>COMING SOON</p></div>
+            <div className='item unicorn-cursor' style={{"--position": 2}}><p>COMING SOON</p></div>
+            <div className='item rocket-cursor' style={{"--position": 3}}><p>COMING SOON</p></div>
+            <div className='item unicorn-cursor' style={{"--position": 4}}><p>COMING SOON</p></div>
+            <div className='item rocket-cursor' style={{"--position": 5}}><p>COMING SOON</p></div>
+            <div className='item unicorn-cursor' style={{"--position": 6}}><p>COMING SOON</p></div>
+            <div className='item rocket-cursor' style={{"--position": 7}}><p>COMING SOON</p></div>
+            <div className='item unicorn-cursor' style={{"--position": 8}}><p>COMING SOON</p></div>
+            <div className='item rocket-cursor' style={{"--position": 9}}><p>COMING SOON</p></div>
+            <div className='item unicorn-cursor' style={{"--position": 10}}><p>COMING SOON</p></div>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
+    </div>
   )
 }
 
